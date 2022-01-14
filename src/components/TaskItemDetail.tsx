@@ -24,9 +24,12 @@ const TaskItemDetail: FC<TaskItemDetailProps> = ({ item, showDialog, onShowDialo
         <>
             <Modal show={show} onHide={handleClose} centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>{item?.title} - Task Details</Modal.Title>
+                    <Modal.Title>
+                        <p contentEditable>{item?.title} - Task Details</p>
+                    </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>  {item?.description}</Modal.Body>
+                <Modal.Body>
+                    <p contentEditable>{item?.description}</p> </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close

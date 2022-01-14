@@ -93,7 +93,7 @@ export default class TaskContainer extends React.Component<ITaskProps, ITaskData
                 {
                     this.state.showEditPopup ?
                         <TaskItemDetail item={this.state.currentItem} showDialog={this.state.showEditPopup} onShowDialog={this.onShowDialogEvent}></TaskItemDetail>
-                        : "==="
+                        : ""
                 }
                 {
                     this.state.isLoading ?
